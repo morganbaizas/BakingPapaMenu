@@ -1,11 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baking Papa Menu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baking Papa's</title>
+<style>
+  body {
+    margin: 0;
+    padding: 50;
+  }
+  .pink-border {
+    border-top: 100px solid pink; /* Adjust thickness by changing the pixel value */
+    padding: 20px; /* Add padding to prevent content from being covered by the border */
+    position: relative; /* Enable positioning of the text */
+  }
+  .pink-border::before {
+    content: "Baking Papa's Bakery"; /* Add the text */
+    display: block; /* Make it a block element */
+    position: absolute; /* Position the text absolutely */
+    top: -30px; /* Adjust the position above the border */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    transform: translateY(-50%); /* Center horizontally */
+    font-size: 20px; /* Adjust font size as needed */
+    color: black; /* Set text color */
+  }
+  .page-button-container {
+        display: flex;
+        justify-content: space-between; /* Distribute items evenly */
+        padding: 10px;
+        background-color: #ffffff;
+    }
+
+    .item-button-container {
+        display: flex;
+        justify-content: space-between; /* Distribute items evenly */
+        padding: 10px;
+        background-color: #ffffff;
+    }
+
+    /* Style for the buttons */
+    .button {
+        padding: 10px 20px;
+        background-color: #ffffff;
+        border-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+</style>
 </head>
 <body>
-    
+
+<div 
+    class="pink-border">
+</div>
+
+<div class="page-button-container">
+    <button class="button">About Us</button>
+    <button class="button">Menu</button>
+    <button class="button">Order</button>
+</div>
+
+<div class="item-button-container">
+    <button class="button">About Us</button>
+    <button class="button">Menu</button>
+    <button class="button">Order</button>
+</div>
+
 </body>
 </html>
+
+<!--
+Can use for later maybe: 
+
+<input class="w3-button w3-black" type="button" value="Input Button">
+<button class="w3-button w3-black">Button Button</button>
+<a href="https://www.w3schools.com" class="w3-button w3-black">Link Button</a>
+-->
