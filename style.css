@@ -1,4 +1,4 @@
-.fuzzy-bubbles-regular {
+/* .fuzzy-bubbles-regular {
     font-family: "Fuzzy Bubbles", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -8,11 +8,16 @@
     font-family: "Fuzzy Bubbles", sans-serif;
     font-weight: 700;
     font-style: normal;
-  }
+  } 
+*/
   
 body {
     margin: 0;
     padding: 50;
+}
+
+p {
+    text-align: center;
 }
         
 
@@ -22,6 +27,12 @@ body {
     position: relative; /* Enable positioning of the text */
 }
     
+.bottom-border {
+    border-top: 100px solid pink; /* Adjust thickness by changing the pixel value */
+    padding: 0.5px; /* Add padding to prevent content from being covered by the border */
+    position: relative; /* Enable positioning of the text */
+}
+
 .pink-border::before {
     content: "Baking Papa's Cafe";
     display: block; /* Make it a block element */
@@ -33,6 +44,7 @@ body {
     font-size: 40px; /* Adjust font size as needed */
     color: black; /* Set text color */
     font-family: 'Fuzzy Bubbles', sans-serif;
+    font-weight: 700;
     color: rgb(168, 221, 114);
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgb(255, 255, 255);
@@ -47,11 +59,13 @@ body {
     
 .item-button-container {
         width: 500px;
-        height: 300px;
+        height: 194.5px;
         display: flex;
         justify-content: space-between; /* Distribute items evenly */
-        padding: 10px;
+        padding: 10px; 
         background-color: #ffffff;
+        margin-right: auto;
+        margin-left: auto;
 }
     
  /* Style for the buttons */
@@ -66,6 +80,7 @@ body {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    align-items: center;
 }
 
 .material-symbols-outlined {
