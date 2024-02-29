@@ -18,13 +18,12 @@ body {
 
 .pink-border {
     border-top: 100px solid pink; /* Adjust thickness by changing the pixel value */
-    padding: 20px; /* Add padding to prevent content from being covered by the border */
+    padding: 0.5px; /* Add padding to prevent content from being covered by the border */
     position: relative; /* Enable positioning of the text */
 }
-
-.pink-divider{
     
-}.pink-border::before {
+.pink-border::before {
+    content: "Baking Papa's Cafe";
     display: block; /* Make it a block element */
     position: absolute; /* Position the text absolutely */
     top: -45px; /* Adjust the position above the border */
@@ -36,7 +35,7 @@ body {
     font-family: 'Fuzzy Bubbles', sans-serif;
     color: rgb(168, 221, 114);
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
 }
         
 .page-button-container {
@@ -47,6 +46,8 @@ body {
 }
     
 .item-button-container {
+        width: 500px;
+        height: 300px;
         display: flex;
         justify-content: space-between; /* Distribute items evenly */
         padding: 10px;
@@ -65,4 +66,13 @@ body {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+}
+
+.material-symbols-outlined {
+    color: rgb(168, 221, 114);
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24  
 }
