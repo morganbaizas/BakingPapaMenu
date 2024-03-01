@@ -63,7 +63,7 @@ img {
 }
     
 .item-button-container {
-        width: 500px;
+        width: 700px;
         height: 194.5px;
         display: flex;
         justify-content: space-between; /* Distribute items evenly */
