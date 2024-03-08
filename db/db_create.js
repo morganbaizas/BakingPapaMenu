@@ -1,38 +1,36 @@
 const db = require("./db_connection")
 
 // Drop any existing tables
-const drop_assignments_table_sql = "drop table if exists assignments";
+const drop_dessert_table_sql = "drop table if exists assignments";
 
 // Execute the query
-db.execute(drop_assignments_table_sql);
+db.execute(drop_dessert_table_sql);
 
-const drop_subjects_table_sql = "drop table if exists subjects";
+const drop_flavor_table_sql = "drop table if exists subjects";
 
-db.execute(drop_subjects_table_sql);
+db.execute(drop_flavor_table_sql);
 
-const create_subjects_table_sql = `CREATE TABLE subjects (
-    subjectId INT NOT NULL AUTO_INCREMENT,
-    subjectName VARCHAR(45) NOT NULL,
-    PRIMARY KEY (subjectId));`;
+const create_flavor_table_sql = `CREATE TABLE flavors (
+    flavorId INT NOT NULL AUTO_INCREMENT,
+    flavorName VARCHAR(45) NOT NULL,
+    PRIMARY KEY (flavorId));`;
 
-db.execute(create_subjects_table_sql);
+db.execute(create_flavor_table_sql);
 
 // Create the assignments table
-const create_assignments_table_sql = `CREATE TABLE assignments (
-    assignmentId INT NOT NULL AUTO_INCREMENT,
-    title VARCHAR(45) NOT NULL,
-    priority INT NULL,
-    subjectId INT NOT NULL,
-    dueDate DATE NULL,
+const create_order_table_sql = `CREATE TABLE dessert (
+    dessertId INT NOT NULL AUTO_INCREMENT,
+    dessertFlavor VARCHAR(45) NOT NULL,
+    quantity INT NULL,
     description VARCHAR(150) NULL,
-    PRIMARY KEY (assignmentId),
+    PRIMARY KEY (dessertId),
     INDEX assignmentSubject_idx (subjectId ASC),
-    CONSTRAINT assignmentSubject
-      FOREIGN KEY (subjectId)
-      REFERENCES subjects (subjectId)
+    CONSTRAINT dessertFlavor
+      FOREIGN KEY (flavorId)
+      REFERENCES dessert (dessertId)
       ON DELETE RESTRICT
       ON UPDATE CASCADE);`;
 
-db.execute(create_assignments_table_sql);
+db.execute(create_order_table_sql);
 
 db.end();
