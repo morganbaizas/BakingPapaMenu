@@ -9,6 +9,13 @@
     font-weight: 700;
     font-style: normal;
   } 
+
+.schoolbell-regular {
+  font-family: "Schoolbell", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 */
   
 body {
@@ -18,6 +25,8 @@ body {
 
 p {
     text-align: center;
+    font-family: 'Schoolbell', cursive;
+    font-size: 25px;
 }
 
 img {
@@ -36,6 +45,22 @@ img {
     border-top: 100px solid pink; /* Adjust thickness by changing the pixel value */
     padding: 0.5px; /* Add padding to prevent content from being covered by the border */
     position: relative; /* Enable positioning of the text */
+}
+
+.bottom-border::before {
+    content: "Contact us: @BakingPapaCafe | (123) 456-7890";
+    display: block; /* Make it a block element */
+    position: absolute; /* Position the text absolutely */
+    top: -45px; /* Adjust the position above the border */
+    left: 26%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    transform: translateY(-50%); /* Center horizontally */
+    font-size: 30px; /* Adjust font size as needed */
+    color: black; /* Set text color */
+    font-family: 'Fuzzy Bubbles', sans-serif;
+    color: rgb(168, 221, 114);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
 }
 
 .pink-border::before {
