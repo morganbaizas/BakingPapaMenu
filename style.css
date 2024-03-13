@@ -29,6 +29,12 @@ p {
     font-size: 25px;
 }
 
+.font-small {
+    text-align: center;
+    font-family: 'Schoolbell', cursive;
+    font-size: 15px;
+}
+
 img {
     width: 100%;
     height: 75%;
